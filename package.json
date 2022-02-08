@@ -1,5 +1,5 @@
 {
-  "name": "guitar-app",
+  "name": "tomytex",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,9 +8,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "next": "12.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "8.5.0",

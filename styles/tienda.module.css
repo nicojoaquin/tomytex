@@ -1,0 +1,6 @@
+.buscador {
+  border-radius: 3px;
+  padding: 0.5rem;
+  border: 1px solid rgb(158, 158, 158);
+  color: var(--negro);
+}

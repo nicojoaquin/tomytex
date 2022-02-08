@@ -1,0 +1,26 @@
+.header {
+  background: var(--principal);
+}
+
+.img {
+  border-radius: 4px;
+}
+
+.navlink {
+  transition: 0.3s ease;
+  color: var(--blanco);
+}
+
+.active {
+  background-color: var(--blanco);
+  color: black;
+}
+
+.active:hover {
+  color: var(--negro);
+}
+
+.navlink:hover {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
