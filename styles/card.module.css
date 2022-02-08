@@ -13,6 +13,10 @@
   }
 }
 
+.cardImg img {
+  border-radius: 5px;
+}
+
 .body {
   transition: 0.3s ease;
   color: var(--negro);
@@ -59,9 +63,17 @@
   padding: 1.5rem;
   border-radius: 3px;
   line-height: 3rem;
+  word-wrap: break-word;
+  inline-size: 60rem;
 }
 @media (min-width: 1200px) {
   .text {
     width: 60rem;
+  }
+}
+@media (max-width: 600px) {
+  .text {
+    font-size: 1.3rem !important;
+    inline-size: 30rem;
   }
 }
