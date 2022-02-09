@@ -21,8 +21,8 @@ const Tienda = ({ data }) => {
 };
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.API_URL}/telas?_sort=created_at:desc`);
-  const data = await res.json();
+  const res = await fetch(`${process.env.API_URL}/telas?populate=*`);
+  const { data } = await res.json();
 
   return {
     props: {

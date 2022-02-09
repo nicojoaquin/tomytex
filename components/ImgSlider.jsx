@@ -17,7 +17,7 @@ const settings = {
 const ImgSlider = ({ imagen }) => {
   return (
     <Slider {...settings} className={`container ${styles.slider}`}>
-      {imagen.map((img, idx) => (
+      {imagen.data.map((img, idx) => (
         <div key={idx}>
           <Image
             key={idx}
@@ -25,7 +25,7 @@ const ImgSlider = ({ imagen }) => {
             layout="responsive"
             width={500}
             height={500}
-            src={img.url}
+            src={img.attributes.url}
             alt={`Tela`}
             className="shadow-lg"
           />

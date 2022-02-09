@@ -3,7 +3,9 @@ import Link from "next/link";
 
 import styles from "../styles/card.module.css";
 
-const Tela = ({ id, nombre, imagen }) => {
+const Tela = ({ id, attributes }) => {
+  const { nombre, imagen } = attributes;
+
   return (
     <Link href={`/tela/${id}?${nombre.toLowerCase()}`}>
       <a style={{ textDecoration: "none" }}>
@@ -14,7 +16,7 @@ const Tela = ({ id, nombre, imagen }) => {
               layout="responsive"
               width={300}
               height={300}
-              src={imagen[0].url}
+              src={imagen.data[0].attributes.url}
               alt={`Tela ${nombre}`}
             />
           </div>

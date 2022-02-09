@@ -4,10 +4,10 @@ import ImgSlider from "../../components/ImgSlider";
 import styles from "../../styles/card.module.css";
 
 const Producto = ({ data }) => {
-  const { descripcion, imagen, nombre, composicion } = data;
+  const { descripcion, imagen, nombre, composicion } = data.attributes;
 
   return (
-    <Layout page={nombre}>
+    <Layout>
       <article className="container-fluid p-0 m-0 row">
         <div className="col-xl-6 m-0 p-0 mb-5">
           <h3 className="heading">{nombre}</h3>
@@ -32,8 +32,8 @@ const Producto = ({ data }) => {
 
 export const getServerSideProps = async (context) => {
   const { id } = context.params;
-  const res = await fetch(`${process.env.API_URL}/telas/${id}`);
-  const data = await res.json();
+  const res = await fetch(`${process.env.API_URL}/telas/${id}?populate=*`);
+  const { data } = await res.json();
 
   return {
     props: {

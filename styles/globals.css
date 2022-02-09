@@ -26,6 +26,11 @@ img {
   background-color: red !important;
   border-radius: 50%;
 }
+@media (max-width: 600px) {
+  [class*="slick-arrow"] {
+    display: none !important;
+  }
+}
 
 [class*="contenedor"] {
   max-width: 120rem;
