@@ -2,7 +2,8 @@
   --principal: #9c0707;
   --blanco: #fff;
   --negro: rgb(10, 10, 10);
-  --fuente-principal: "Outfit", sans-serif;
+  --fuente-principal: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
 }
 html {
   font-size: 62.5%;
@@ -40,7 +41,7 @@ img {
 [class*="heading"] {
   font-size: 4rem;
   text-align: center;
-  font-weight: 900;
+  font-weight: 600;
   color: var(--principal) !important;
-  margin: 5rem 0;
+  margin: 4rem 0;
 }

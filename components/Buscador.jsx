@@ -1,9 +1,7 @@
 import { useState } from "react";
 import style from "../styles/tienda.module.css";
 
-const Buscador = ({ setTelasFiltradas, telas }) => {
-  const [query, setQuery] = useState("");
-
+const Buscador = ({ setTelasFiltradas, telas, query, setQuery }) => {
   const filtrarTelas = () => {
     const filtro = telas.filter((tela) => {
       if (query === "") {

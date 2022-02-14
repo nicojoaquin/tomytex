@@ -14,18 +14,17 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const ImgSlider = ({ imagen }) => {
+const ImgSlider = ({ imagenes }) => {
   return (
     <Slider {...settings} className={`container ${styles.slider}`}>
-      {imagen.data.map((img, idx) => (
-        <div key={idx}>
+      {imagenes.map(({ url, public_id: id }) => (
+        <div key={id}>
           <Image
-            key={idx}
             priority
             layout="responsive"
             width={500}
             height={500}
-            src={img.attributes.url}
+            src={url}
             alt={`Tela`}
             className="shadow-lg"
           />

@@ -38,7 +38,7 @@ const Header = () => {
                 router.pathname == "/tienda" ? styles.active : styles.navlink
               }`}
             >
-              Telas
+              Productos
             </a>
           </Link>
         </nav>
