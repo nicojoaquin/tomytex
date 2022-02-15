@@ -4,3 +4,16 @@
   border: 1px solid rgb(158, 158, 158);
   color: var(--negro);
 }
+
+.header {
+  margin-right: 5rem !important;
+}
+
+@media (max-width: 524px) {
+  .tiendaContainer {
+    flex-direction: column;
+  }
+  .header {
+    margin-right: 0 !important;
+  }
+}

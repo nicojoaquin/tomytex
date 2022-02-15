@@ -10,17 +10,18 @@
   margin-bottom: 3rem;
 }
 
-.redes {
-  gap: 5rem;
-}
-
 .red {
   text-decoration: none;
   color: var(--negro);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   padding: 5rem;
   border-radius: 5%;
+  max-width: 300px;
+  height: 220px;
   transition: background-color 0.3s ease;
+  color: var(--blanco);
 }
 .red:hover {
   color: var(--blanco);
@@ -34,4 +35,49 @@
 
 .red span {
   text-decoration: underline;
+}
+
+@media (min-width: 991px) {
+  .nosotrosText {
+    width: 65%;
+  }
+}
+
+.futbol img {
+  object-fit: contain;
+}
+
+.enviosCard {
+  color: var(--negro) !important;
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 5rem;
+  border-radius: 5%;
+  height: 300px;
+  max-width: 300px;
+  color: var(--blanco);
+  background: linear-gradient(120deg, var(--principal) 50%, #fff 50%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+@media (min-width: 1000px) {
+  .enviosCard:hover {
+    transform: scale(1.1);
+    background: linear-gradient(120deg, var(--principal) 50%, var(--negro) 50%);
+    color: var(--blanco) !important;
+  }
+}
+
+.icono {
+  font-size: 3rem;
+  text-align: end;
+  position: absolute;
+  bottom: 15%;
+  right: 15%;
+}
+@media (max-width: 991px) {
+  .icono {
+    right: 45%;
+    bottom: 5%;
+  }
 }

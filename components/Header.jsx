@@ -11,13 +11,13 @@ const Header = () => {
     <header className={`p-3 ${styles.header}`}>
       <div className="container-fluid d-flex justify-content-center flex-column align-items-center">
         <Link href="/">
-          <a className="shadow-md">
+          <a>
             <Image
               className={styles.img}
               src="/img/logo.svg"
               alt="logo"
               width={350}
-              height={200}
+              height={330}
             />
           </a>
         </Link>

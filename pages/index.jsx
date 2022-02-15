@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
-import Contacto from "../components/Contacto";
 import Carousel from "../components/Carousel";
+import Nosotros from "../components/Nosotros";
 
 import styles from "../styles/inicio.module.css";
 
@@ -15,10 +15,8 @@ const Home = () => {
             <span className="fw-bolder"> MODELO</span>
           </p>
         </section>
-        <hr />
         <Carousel />
-        <hr />
-        <Contacto />
+        <Nosotros />
       </main>
     </Layout>
   );

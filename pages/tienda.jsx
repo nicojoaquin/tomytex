@@ -3,6 +3,8 @@ import Buscador from "../components/Buscador";
 import Layout from "../components/Layout";
 import Listado from "../components/Listado";
 
+import styles from "../styles/tienda.module.css";
+
 const Tienda = ({ telas }) => {
   const [telasFiltradas, setTelasFiltradas] = useState([]);
   const [query, setQuery] = useState("");
@@ -10,8 +12,10 @@ const Tienda = ({ telas }) => {
   return (
     <Layout page={"Tienda"}>
       <main className="container">
-        <div className="d-flex flex-wrap align-items-center justify-content-evenly">
-          <h1 className="heading">Nuestras telas</h1>
+        <div
+          className={`d-flex flex-wrap align-items-center justify-content-start ${styles.tiendaContainer}`}
+        >
+          <h1 className={`heading ${styles.header}`}>Nuestras telas</h1>
           <Buscador
             setTelasFiltradas={setTelasFiltradas}
             telas={telas}
