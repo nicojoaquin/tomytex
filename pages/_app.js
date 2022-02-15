@@ -6,7 +6,7 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap.bundle");
+    import("bootstrap/dist/js/bootstrap");
   }, []);
   return <Component {...pageProps} />
 }
