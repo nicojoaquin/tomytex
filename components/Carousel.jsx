@@ -3,72 +3,33 @@ import tomytex from "../public/img/tomytex.jpg";
 import tomytex2 from "../public/img/tomytex2.jpg";
 import tomytex3 from "../public/img/tomytex3.jpg";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+};
+
 const Carousel = () => {
   return (
     <section className="mt-5">
-      <div
-        id="carouselExampleCaptions"
-        className="carousel carousel-dark slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+      <Slider {...settings}>
+        <div className="carousel-item active">
+          <Image width={1500} height={800} src={tomytex} alt="tomytex" />
         </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <Image width={1500} height={800} src={tomytex} alt="tomytex" />
-          </div>
-          <div className="carousel-item">
-            <Image width={1500} height={800} src={tomytex3} alt="tomytex" />
-          </div>
-          <div className="carousel-item">
-            <Image width={1500} height={800} src={tomytex2} alt="tomytex" />
-          </div>
+        <div className="carousel-item">
+          <Image width={1500} height={800} src={tomytex3} alt="tomytex" />
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+        <div className="carousel-item">
+          <Image width={1500} height={800} src={tomytex2} alt="tomytex" />
+        </div>
+      </Slider>
     </section>
   );
 };
