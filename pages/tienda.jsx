@@ -31,14 +31,18 @@ const Tienda = ({ telas }) => {
 };
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.API_URL}`);
-  const { telas } = await res.json();
+  try {
+    const res = await fetch(`${process.env.API_URL}`);
+    const { telas } = await res.json();
 
-  return {
-    props: {
-      telas,
-    },
-  };
+    return {
+      props: {
+        telas,
+      },
+    };
+  } catch (err) {
+    console.warn(err);
+  }
 };
 
 export default Tienda;

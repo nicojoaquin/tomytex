@@ -16,7 +16,10 @@ const settings = {
 
 const ImgSlider = ({ imagenes }) => {
   return (
-    <Slider {...settings} className={`container ${styles.slider}`}>
+    <Slider
+      {...settings}
+      className={`container d-flex justify-content-center ${styles.slider}`}
+    >
       {imagenes.map(({ url, public_id: id }) => (
         <div key={id}>
           <Image

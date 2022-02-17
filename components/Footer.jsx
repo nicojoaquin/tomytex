@@ -49,7 +49,7 @@ const Footer = () => {
           <article className={styles.red}>
             <Image width={50} height={50} src={facebook} alt="facebook" />
             <br />
-            <span>Visita nuestro Facebook</span>
+            <span>Visitanos Facebook</span>
           </article>
         </a>
       </div>
