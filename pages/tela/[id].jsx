@@ -12,15 +12,15 @@ const Producto = ({ tela }) => {
     <Layout>
       <article className="container-fluid p-0 m-0 row">
         <div className="col-xl-6 m-0 p-0 mb-5">
-          <h3 className="heading">{nombre}</h3>
+          <h3 className={`heading ${styles.nombre}`}>{nombre}</h3>
           {imagenes.length > 0 ? (
             <ImgSlider imagenes={imagenes} />
           ) : (
             <Image
               priority
               layout="responsive"
-              width={300}
-              height={300}
+              width={50}
+              height={50}
               src={desconocido}
               alt={`Tela ${nombre}`}
             />
