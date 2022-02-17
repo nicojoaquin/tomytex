@@ -16,10 +16,7 @@ const settings = {
 
 const ImgSlider = ({ imagenes }) => {
   return (
-    <Slider
-      {...settings}
-      className={`container d-flex justify-content-center flex-column ${styles.slider}`}
-    >
+    <Slider {...settings} className={`container ${styles.slider}`}>
       {imagenes.map(({ url, public_id: id }) => (
         <div key={id}>
           <Image
@@ -29,7 +26,7 @@ const ImgSlider = ({ imagenes }) => {
             height={500}
             src={url}
             alt={`Tela`}
-            className="shadow-lg"
+            className="shadow-lg ms-5"
           />
         </div>
       ))}
