@@ -87,3 +87,13 @@
     height: 40rem !important;
   }
 }
+
+.footer {
+  gap: 3.5rem;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    flex-direction: column;
+  }
+}

@@ -3,6 +3,7 @@ import whatsapp from "../public/img/wpp.png";
 import instagram from "../public/img/iglogo.png";
 import facebook from "../public/img/fb.png";
 import phone from "../public/img/phone.png";
+import direc from "../public/img/direc.png";
 
 import styles from "../styles/inicio.module.css";
 
@@ -54,13 +55,22 @@ const Footer = () => {
         </a>
       </div>
       <div className="d-flex justify-content-center">
-        <article>
-          <Image width={50} height={50} src={phone} alt="facebook" />
-          <br />
-          <span>Numero de linea:</span>
-          <br />
-          <span>(011) 49638510</span>
-        </article>
+        <div className={`d-flex ${styles.footer}`}>
+          <article>
+            <Image width={50} height={50} src={direc} alt="facebook" />
+            <br />
+            <span>Azcuénaga 540</span>
+            <br />
+            <span>C1029AAL CABA</span>
+          </article>
+          <article>
+            <Image width={50} height={50} src={phone} alt="facebook" />
+            <br />
+            <span>Numero de linea:</span>
+            <br />
+            <span>(011) 49638510</span>
+          </article>
+        </div>
       </div>
     </section>
   );
