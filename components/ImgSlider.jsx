@@ -26,7 +26,7 @@ const ImgSlider = ({ imagenes }) => {
             height={500}
             src={url}
             alt={`Tela`}
-            className="shadow-lg ms-5"
+            className="shadow-lg "
           />
         </div>
       ))}

@@ -36,7 +36,7 @@ const Nosotros = () => {
           <iframe
             className={`mb-5 ${styles.iframe}`}
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.192003325405!2d-58.4009899!3d-34.6029477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4790e9e56be28530!2sTomytex%20Mayorista%20Textil!5e0!3m2!1ses!2sar!4v1645128157502!5m2!1ses!2sar"
-            style={{ border: 0, width: "90%", height: "64vh" }}
+            style={{ border: 0, width: "90%", height: "550px" }}
             allowFullScreen=""
             loading="lazy"
           ></iframe>

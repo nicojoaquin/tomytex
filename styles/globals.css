@@ -23,6 +23,11 @@ img {
   max-width: 100%;
 }
 
+.slick-dots {
+  position: relative !important;
+  bottom: 5px !important;
+}
+
 [class*="slick-arrow"] {
   background-color: red !important;
   border-radius: 50%;

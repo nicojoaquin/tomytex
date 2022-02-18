@@ -47,20 +47,29 @@
   object-fit: cover;
 }
 
+.nombre {
+  color: var(--principal);
+  font-size: 4rem;
+  font-weight: 600;
+}
+
 .desc p {
   font-size: 1.5rem;
 }
 
 .desc h3 {
   font-size: 2.5rem;
-  background-color: #ebebeb;
   padding: 0.5rem;
   border-radius: 3px;
 }
 
+.article {
+  margin-top: 100px !important;
+  margin-bottom: 100px !important;
+}
+
 .text {
   color: #7a7a7a;
-  padding: 1.5rem;
   border-radius: 3px;
   line-height: 3rem;
   word-wrap: break-word;
@@ -81,5 +90,11 @@
 @media (max-width: 768px) {
   .nombre {
     font-size: 90%;
+  }
+  .desc {
+    align-items: center !important;
+  }
+  .nombre {
+    text-align: center;
   }
 }

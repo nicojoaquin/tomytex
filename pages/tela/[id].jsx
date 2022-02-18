@@ -10,35 +10,38 @@ const Producto = ({ tela }) => {
 
   return (
     <Layout>
-      <article className="container-fluid p-0 m-0 row">
-        <div className="col-xl-6 m-0 p-0 mb-5">
-          <h3 className={`heading ${styles.nombre}`}>{nombre}</h3>
-          {imagenes.length > 0 ? (
-            <ImgSlider imagenes={imagenes} />
-          ) : (
-            <Image
-              priority
-              layout="responsive"
-              width={50}
-              height={50}
-              src={desconocido}
-              alt={`Tela ${nombre}`}
-            />
-          )}
-        </div>
-        <div
-          className={`mt-5 p-5 col-xl-6  d-flex flex-column justify-content-center align-items-center ${styles.desc}`}
-        >
-          <div>
-            <span className="me-3" style={{ fontSize: "2.5rem" }}>
-              Composición:
-            </span>
-            <u>{comp}</u>
+      <section className="d-flex justify-content-center align-items-center">
+        <article className={`container p-0 m-0 row ${styles.article}`}>
+          <div className="col-xl-6  p-5 ">
+            {imagenes.length > 0 ? (
+              <ImgSlider imagenes={imagenes} />
+            ) : (
+              <Image
+                priority
+                layout="responsive"
+                width={50}
+                height={50}
+                src={desconocido}
+                alt={`Tela ${nombre}`}
+              />
+            )}
           </div>
-          <h3 className="mt-5">Descripción</h3>
-          <p className={`mt-1 text-underline ${styles.text}`}>{desc}</p>
-        </div>
-      </article>
+          <div
+            className={`p-5 col-xl-6  d-flex flex-column  align-items-start  ${styles.desc}`}
+          >
+            <div>
+              <h3 className={`${styles.nombre}`}>{nombre}</h3>
+              <hr />
+              <span className="me-3" style={{ fontSize: "2.5rem" }}>
+                Composición:
+              </span>
+              <u>{comp}</u>
+            </div>
+            <h3 className="mt-5">Descripción</h3>
+            <p className={`mt-1 text-underline ${styles.text}`}>{desc}</p>
+          </div>
+        </article>
+      </section>
     </Layout>
   );
 };
