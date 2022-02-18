@@ -9,7 +9,7 @@ const Producto = ({ tela }) => {
   const { desc, imagenes, nombre, comp } = tela;
 
   return (
-    <Layout>
+    <Layout page={nombre}>
       <section className="d-flex justify-content-center align-items-center">
         <article className={`container p-0 m-0 row ${styles.article}`}>
           <div className="col-xl-6  p-5 ">

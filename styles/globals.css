@@ -19,13 +19,25 @@ body {
   font-family: var(--fuente-principal);
   line-height: 1.5;
 }
-img {
-  max-width: 100%;
-}
 
 .slick-dots {
   position: relative !important;
   bottom: 5px !important;
+}
+
+.image-gallery-slide .image-gallery-image {
+  object-fit: cover !important;
+  height: 500px;
+}
+@media (max-width: 500px) {
+  .image-gallery-slide .image-gallery-image {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .image-gallery-slide .image-gallery-image {
+    height: 600px;
+  }
 }
 
 [class*="slick-arrow"] {

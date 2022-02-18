@@ -5,6 +5,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import '../styles/normalize.css'
 import '../styles/globals.css'
 import "nprogress/nprogress.css";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 
 NProgress.configure({

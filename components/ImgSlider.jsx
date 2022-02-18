@@ -1,7 +1,5 @@
-import Image from "next/image";
-import Slider from "react-slick";
-
-import styles from "../styles/card.module.css";
+import { useEffect, useState } from "react";
+import ImageGallery from "react-image-gallery";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,22 +13,25 @@ const settings = {
 };
 
 const ImgSlider = ({ imagenes }) => {
+  const [images, setImages] = useState([]);
+  let imagen = [];
+  useEffect(() => {
+    imagenes.map((img) => {
+      imagen.push({
+        original: img.url,
+        thumbnail: img.url,
+        thumbnailHeight: "60px",
+      });
+    });
+    setImages(imagen);
+  }, []);
+
   return (
-    <Slider {...settings} className={`container ${styles.slider}`}>
-      {imagenes.map(({ url, public_id: id }) => (
-        <div key={id}>
-          <Image
-            priority
-            layout="responsive"
-            width={500}
-            height={500}
-            src={url}
-            alt={`Tela`}
-            className="shadow-lg "
-          />
-        </div>
-      ))}
-    </Slider>
+    <ImageGallery
+      showPlayButton={false}
+      showFullscreenButton={false}
+      items={images}
+    />
   );
 };
 
