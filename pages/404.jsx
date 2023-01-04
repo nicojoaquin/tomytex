@@ -5,9 +5,11 @@ const NotFound = () => {
     <div>
       <h1 className="heading">Página no encontrada</h1>
 
-      <Link href="/">
-        <a>Volver</a>
-      </Link>
+      <div className="d-flex justify-content-center">
+        <Link href="/">
+          <a>Volver</a>
+        </Link>
+      </div>
     </div>
   );
 };

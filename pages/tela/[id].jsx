@@ -49,18 +49,20 @@ const Producto = ({ tela }) => {
 export const getServerSideProps = async (context) => {
   const { id } = context.params;
 
-  try {
-    const res = await fetch(`${process.env.API_URL}/tela/${id}`);
-    const { tela } = await res.json();
+  const res = await fetch(`${process.env.API_URL}/tela/${id}`);
+  const { tela, ok } = await res.json();
 
+  if (ok)
     return {
-      props: {
-        tela,
-      },
+      props: { tela },
     };
-  } catch (err) {
-    console.warn(err);
-  }
+
+  return {
+    props: {},
+    redirect: {
+      destination: "/404",
+    },
+  };
 };
 
 export default Producto;

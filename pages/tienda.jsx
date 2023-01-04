@@ -30,7 +30,7 @@ const Tienda = ({ telas }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   try {
     const res = await fetch(`${process.env.API_URL}`);
     const { telas } = await res.json();
