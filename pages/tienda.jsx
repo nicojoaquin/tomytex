@@ -16,12 +16,14 @@ const Tienda = ({ telas }) => {
           className={`d-flex flex-wrap align-items-center justify-content-start ${styles.tiendaContainer}`}
         >
           <h1 className={`heading ${styles.header}`}>Nuestras telas</h1>
-          <Buscador
-            setTelasFiltradas={setTelasFiltradas}
-            telas={telas}
-            query={query}
-            setQuery={setQuery}
-          />
+          {telas ? (
+            <Buscador
+              setTelasFiltradas={setTelasFiltradas}
+              telas={telas}
+              query={query}
+              setQuery={setQuery}
+            />
+          ) : null}
         </div>
         <hr className="mb-5" />
         <Listado telasFiltradas={telasFiltradas} telas={telas} query={query} />
@@ -41,7 +43,9 @@ export const getStaticProps = async () => {
       },
     };
   } catch (err) {
-    console.warn(err);
+    return {
+      props: {},
+    };
   }
 };
 

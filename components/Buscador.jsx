@@ -1,4 +1,3 @@
-import { useState } from "react";
 import style from "../styles/tienda.module.css";
 
 const Buscador = ({ setTelasFiltradas, telas, query, setQuery }) => {
