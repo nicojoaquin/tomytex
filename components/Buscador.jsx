@@ -9,6 +9,7 @@ const Buscador = ({ setTelasFiltradas, telas, query, setQuery }) => {
         return tela.nombre.toLowerCase().includes(query.trim().toLowerCase());
       }
     });
+
     setTelasFiltradas(filtro);
   };
 
