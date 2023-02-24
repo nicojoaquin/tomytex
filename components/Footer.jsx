@@ -19,7 +19,7 @@ const Footer = () => {
       <div className={`row mb-5 ${styles.redes}`}>
         <a
           className={`col-md-12 col-lg-4 mt-5 p-0 d-flex flex-colum justify-content-center`}
-          href="https://api.whatsapp.com/send?phone=5491148701495&text=Escribeme"
+          href="https://api.whatsapp.com/send?phone=5491139348575&text=Hola%2c%20me%20gustaría%20hacerte%20una%20pregunta%2e%2e%2e"
           target="_blank"
           rel="noreferrer"
         >
