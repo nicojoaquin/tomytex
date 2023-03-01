@@ -50,7 +50,7 @@ export const getServerSideProps = async (context) => {
   const { id } = context.params;
 
   try {
-    const res = await fetch(`${process.env.API_URL}/tela/${id}`);
+    const res = await fetch(`${process.env.API_URL}/api/tela/${id}`);
     const { tela, ok } = await res.json();
 
     if (!ok) throw new Error("Not found");

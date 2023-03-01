@@ -6,9 +6,9 @@ const Layout = ({ children, page }) => {
   return (
     <div>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta
-          http-equiv="Content-Security-Policy"
+          httpEquiv="Content-Security-Policy"
           content="upgrade-insecure-requests"
         ></meta>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -23,7 +23,11 @@ const Layout = ({ children, page }) => {
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
         <title>Tomytex - {page}</title>
       </Head>
       <Header />

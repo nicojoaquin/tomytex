@@ -32,13 +32,22 @@ const Header = () => {
               Inicio
             </a>
           </Link>
-          <Link href="/tienda">
+          <Link href="/telas">
             <a
               className={`fw-bold fs-1 p-3 rounded-3 text-decoration-none ms-3 ${
-                router.pathname == "/tienda" ? styles.active : styles.navlink
+                router.pathname == "/telas" ? styles.active : styles.navlink
               }`}
             >
               Productos
+            </a>
+          </Link>
+          <Link href="/colores">
+            <a
+              className={`fw-bold fs-1 p-3 rounded-3 text-decoration-none ms-3 ${
+                router.pathname == "/colores" ? styles.active : styles.navlink
+              }`}
+            >
+              Colores
             </a>
           </Link>
         </nav>

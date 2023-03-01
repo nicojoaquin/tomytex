@@ -5,12 +5,12 @@ import Listado from "../components/Listado";
 
 import styles from "../styles/tienda.module.css";
 
-const Tienda = ({ telas }) => {
+const Telas = ({ telas }) => {
   const [telasFiltradas, setTelasFiltradas] = useState([]);
   const [query, setQuery] = useState("");
 
   return (
-    <Layout page={"Tienda"}>
+    <Layout page={"Telas"}>
       <main className="container">
         <div
           className={`d-flex flex-wrap align-items-center justify-content-start ${styles.tiendaContainer}`}
@@ -18,15 +18,15 @@ const Tienda = ({ telas }) => {
           <h1 className={`heading ${styles.header}`}>Nuestras telas</h1>
           {telas ? (
             <Buscador
-              setTelasFiltradas={setTelasFiltradas}
-              telas={telas}
+              handleItemsFiltrados={setTelasFiltradas}
+              items={telas}
               query={query}
-              setQuery={setQuery}
+              handleQuery={setQuery}
             />
           ) : null}
         </div>
         <hr className="mb-5" />
-        <Listado telasFiltradas={telasFiltradas} telas={telas} query={query} />
+        <Listado itemsFiltrados={telasFiltradas} items={telas} query={query} />
       </main>
     </Layout>
   );
@@ -34,7 +34,7 @@ const Tienda = ({ telas }) => {
 
 export const getServerSideProps = async () => {
   try {
-    const res = await fetch(`${process.env.API_URL}`);
+    const res = await fetch(`${process.env.API_URL}/api`);
     const { telas } = await res.json();
 
     return {
@@ -45,8 +45,11 @@ export const getServerSideProps = async () => {
   } catch (err) {
     return {
       props: {},
+      redirect: {
+        destination: "/404",
+      },
     };
   }
 };
 
-export default Tienda;
+export default Telas;

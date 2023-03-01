@@ -1,16 +1,16 @@
 import style from "../styles/tienda.module.css";
 
-const Buscador = ({ setTelasFiltradas, telas, query, setQuery }) => {
-  const filtrarTelas = () => {
-    const filtro = telas.filter((tela) => {
+const Buscador = ({ handleItemsFiltrados, items, query, handleQuery }) => {
+  const filtrarItems = () => {
+    const filtro = items.filter((item) => {
       if (query === "") {
-        return tela;
+        return item;
       } else {
-        return tela.nombre.toLowerCase().includes(query.trim().toLowerCase());
+        return item.nombre.toLowerCase().includes(query.trim().toLowerCase());
       }
     });
 
-    setTelasFiltradas(filtro);
+    handleItemsFiltrados(filtro);
   };
 
   return (
@@ -19,8 +19,8 @@ const Buscador = ({ setTelasFiltradas, telas, query, setQuery }) => {
       type="text"
       placeholder="Buscar..."
       value={query}
-      onChange={({ target }) => setQuery(target.value)}
-      onKeyUp={filtrarTelas}
+      onChange={({ target }) => handleQuery(target.value)}
+      onKeyUp={filtrarItems}
     />
   );
 };
