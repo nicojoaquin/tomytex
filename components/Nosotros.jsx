@@ -5,7 +5,7 @@ import styles from "../styles/inicio.module.css";
 
 const Nosotros = () => {
   return (
-    <section className="mt-5">
+    <section className="mt-5 px-3">
       <div className="row mb-5">
         <article className="col-xl-6 mb-5">
           <h2 className={`mt-5 text-center fs-1 ${styles.contactoHeading}`}>

@@ -4,33 +4,44 @@
   margin-bottom: 3rem;
 }
 
+.contactoContainer {
+  gap: 100px;
+}
+
+@media (max-width: 768px) {
+  .contactoContainer {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .header {
+    margin-right: 0 !important;
+  }
+  .redes {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
 .contactoHeading {
-  color: var(--principal);
+  color: var(--negro);
   font-weight: 600;
-  margin-bottom: 3rem;
 }
 
 .red {
   text-decoration: none;
-  color: var(--negro);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  padding: 5rem;
   border-radius: 5%;
   max-width: 300px;
   height: 220px;
   transition: background-color 0.3s ease;
+  background-color: var(--negro);
   color: var(--blanco);
 }
 .red:hover {
   color: var(--blanco);
   background-color: var(--principal);
-}
-@media (max-width: 991px) {
-  .red {
-    width: 60%;
-  }
 }
 
 .red span {
