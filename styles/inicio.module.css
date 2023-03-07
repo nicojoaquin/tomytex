@@ -44,6 +44,14 @@
   background-color: var(--principal);
 }
 
+.redFooter {
+  transition: 0.3s ease;
+}
+.redFooter:hover {
+  text-decoration: underline !important;
+  transition: 0.3s ease;
+}
+
 .red span {
   text-decoration: underline;
 }

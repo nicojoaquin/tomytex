@@ -68,7 +68,7 @@ const Contacto = () => {
               />
               <br />
               <div className="d-flex flex-column">
-                <span>Escribinos a whatsapp:</span>
+                <span>Escribinos a Whatsapp:</span>
                 <p>(+54 9) 1139348575</p>
               </div>
             </article>
