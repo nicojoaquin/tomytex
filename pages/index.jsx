@@ -4,19 +4,26 @@ import Nosotros from "../components/Nosotros";
 
 import styles from "../styles/inicio.module.css";
 
-const Home = () => {
+const Home = ({ textos }) => {
   return (
     <Layout page={"Inicio"}>
       <main className="container">
         <section className="text-center mb-5">
           <h1 className={styles.inicioHeading}>Bienvenidos a Tomytex</h1>
           <p className="text-decoration-underline fst-italic text-muted">
-            Único especialista en telas DEPORTIVAS y distribución de TELAS
-            <span className="fw-bolder"> MODELO</span>
+            {textos.subtitulo}
           </p>
         </section>
-        <Carousel />
-        <Nosotros />
+        <Carousel imagenes={textos.imagenesCarrusel} />
+        <Nosotros
+          imagen={textos.imagenNosotros}
+          desc={textos.descripcion}
+          cards={{
+            card1: textos.card1,
+            card2: textos.card2,
+            card3: textos.card3,
+          }}
+        />
       </main>
     </Layout>
   );
@@ -24,10 +31,13 @@ const Home = () => {
 
 export const getServerSideProps = async () => {
   try {
-    await fetch(`${process.env.API_URL}/welcome`);
+    const res = await fetch(`${process.env.API_URL}/textos`);
+    const data = await res.json();
 
     return {
-      props: {},
+      props: {
+        textos: data.textos,
+      },
     };
   } catch (err) {
     return {

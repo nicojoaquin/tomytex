@@ -1,9 +1,7 @@
 import Image from "next/image";
-import futbol from "../public/img/futbol.jpg";
-
 import styles from "../styles/inicio.module.css";
 
-const Nosotros = () => {
+const Nosotros = ({ desc, imagen, cards: { card1, card2, card3 } }) => {
   return (
     <section className="mt-5 px-3">
       <div className="row mb-5">
@@ -12,18 +10,16 @@ const Nosotros = () => {
             ¿Quiénes somos?
           </h2>
           <div className="d-flex justify-content-center">
-            <p className={`mb-5 ${styles.nosotrosText}`}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Excepturi voluptatem esse obcaecati assumenda cupiditate facere
-              totam tempora natus tempore eligendi recusandae ullam dolor,
-              maxime exercitationem sed delectus non a nesciunt, inventore, hic
-              enim repudiandae porro! Sed molestias, sapiente sunt et voluptate
-              veritatis maxime iure quae architecto dolorum perspiciatis
-              molestiae reprehenderit.
-            </p>
+            <p className={`mb-5 ${styles.nosotrosText}`}>{desc}</p>
           </div>
           <div className={`d-flex justify-content-center ${styles.futbol}`}>
-            <Image width={600} height={400} src={futbol} alt="nosotros" />
+            <Image
+              objectFit="cover"
+              width={600}
+              height={400}
+              src={imagen?.url}
+              alt="nosotros"
+            />
           </div>
         </article>
         <aside className="col-xl-6 d-flex justify-content-center align-items-center flex-column">
@@ -50,27 +46,19 @@ const Nosotros = () => {
         <div className="row">
           <div className="col-md-12 col-lg-4 mt-5 p-0 d-flex flex-colum justify-content-center">
             <article className={`card ${styles.enviosCard}`}>
-              <p>
-                Nos haces el pedido, lo cotizamos en el momento y nos pasas los
-                datos para enviar.
-              </p>
+              <p>{card1}</p>
               <i className={`bi bi-list-ul ${styles.icono}`}></i>
             </article>
           </div>
           <div className="col-md-12 col-lg-4 mt-5 p-0 d-flex flex-colum justify-content-center">
             <article className={`card ${styles.enviosCard}`}>
-              <p>
-                El envío puede ser por cualquier expreso interprovincial, o por
-                flete entre 9:00 y 12:00 hs.
-              </p>
+              <p>{card2}</p>
               <i className={`bi bi-truck ${styles.icono}`}></i>
             </article>
           </div>
           <div className="col-md-12 col-lg-4 mt-5 mb-5 p-0 d-flex flex-colum justify-content-center">
             <article className={`card ${styles.enviosCard}`}>
-              <p>
-                El mínimo de envío al interior es de 8kgs (puede ser variado).
-              </p>
+              <p>{card3}</p>
               <i className={`bi bi-box-seam ${styles.icono}`}></i>
             </article>
           </div>
