@@ -22,4 +22,18 @@ const Home = () => {
   );
 };
 
+export const getServerSideProps = async () => {
+  try {
+    await fetch(`${process.env.API_URL}/welcome`);
+
+    return {
+      props: {},
+    };
+  } catch (err) {
+    return {
+      props: {},
+    };
+  }
+};
+
 export default Home;

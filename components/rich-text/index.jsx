@@ -17,24 +17,17 @@ const RichText = ({ html, classNames = {} }) => {
     <HtmlMapper html={html} decodeEntities>
       {{
         b: ({ children }) => (
-          <Body className={classNames.b} strong>
-            {children}
-          </Body>
+          <strong className={classNames.b}>{children}</strong>
         ),
         br: Br,
-        em: ({ children }) => (
-          <Body className={classNames.em} italic>
-            {children}
-          </Body>
-        ),
+        em: ({ children }) => <em className={classNames.em}>{children}</em>,
+        i: ({ children }) => <i className={classNames.i}>{children}</i>,
         li: ({ children }) => <Li className={classNames.li}>{children}</Li>,
 
         ol: ({ children }) => <Ol className={classNames.ol}>{children}</Ol>,
-        p: ({ children }) => <Body className={classNames.p}>{children}</Body>,
+        p: ({ children }) => <p className={classNames.p}>{children}</p>,
         strong: ({ children }) => (
-          <Body className={classNames.strong} strong>
-            {children}
-          </Body>
+          <strong className={classNames.strong}>{children}</strong>
         ),
         ul: ({ children }) => <Ul className={classNames.ul}>{children}</Ul>,
       }}

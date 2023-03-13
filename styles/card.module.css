@@ -65,8 +65,7 @@
 
 .text {
   color: #7a7a7a;
-  border-radius: 3px;
-  line-height: 3rem;
+  line-height: 2.5rem;
   word-wrap: break-word;
   inline-size: 60rem;
 }

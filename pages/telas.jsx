@@ -35,11 +35,11 @@ const Telas = ({ telas }) => {
 export const getServerSideProps = async () => {
   try {
     const res = await fetch(`${process.env.API_URL}/api`);
-    const { telas } = await res.json();
+    const data = await res.json();
 
     return {
       props: {
-        telas,
+        telas: data?.telas,
       },
     };
   } catch (err) {

@@ -40,11 +40,11 @@ const Colores = ({ colores }) => {
 export const getServerSideProps = async () => {
   try {
     const res = await fetch(`${process.env.API_URL}/colores`);
-    const { colores } = await res.json();
+    const data = await res.json();
 
     return {
       props: {
-        colores,
+        colores: data?.colores,
       },
     };
   } catch (err) {

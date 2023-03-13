@@ -8,7 +8,7 @@ import RichText from "../../components/rich-text";
 
 const Producto = ({ tela }) => {
   const { desc, imagenes, nombre, comp } = tela;
-
+  console.log(desc);
   return (
     <Layout page={nombre}>
       <section className="my-5 d-flex justify-content-center align-items-center">
@@ -38,11 +38,10 @@ const Producto = ({ tela }) => {
               </span>
               <u>{comp}</u>
             </div>
-            <h3 className="mt-5">Descripción</h3>
-            <RichText
-              className={`mt-1 text-underline ${styles.text}`}
-              html={desc}
-            />
+            <h3 className="mt-5 p-0">Descripción</h3>
+            <div className={`mt-1 ${styles.text}`}>
+              <RichText html={desc.trim()} />
+            </div>
           </div>
         </article>
       </section>
