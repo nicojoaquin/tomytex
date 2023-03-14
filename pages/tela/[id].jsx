@@ -39,7 +39,7 @@ const Producto = ({ tela }) => {
             </div>
             <h3 className="mt-5 p-0">Descripción</h3>
             <div className={`mt-1 ${styles.text}`}>
-              <RichText html={desc.trim()} />
+              <RichText html={`<p>${desc.trim()}</p>`} />
             </div>
           </div>
         </article>

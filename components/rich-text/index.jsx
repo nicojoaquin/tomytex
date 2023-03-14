@@ -20,6 +20,9 @@ const RichText = ({ html, classNames = {} }) => {
           <strong className={classNames.b}>{children}</strong>
         ),
         br: Br,
+        span: ({ children }) => (
+          <span className={classNames.span}>{children}</span>
+        ),
         em: ({ children }) => <em className={classNames.em}>{children}</em>,
         i: ({ children }) => <i className={classNames.i}>{children}</i>,
         li: ({ children }) => <Li className={classNames.li}>{children}</Li>,
