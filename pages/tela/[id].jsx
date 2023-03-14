@@ -8,7 +8,6 @@ import RichText from "../../components/rich-text";
 
 const Producto = ({ tela }) => {
   const { desc, imagenes, nombre, comp } = tela;
-  console.log(desc);
   return (
     <Layout page={nombre}>
       <section className="my-5 d-flex justify-content-center align-items-center">
