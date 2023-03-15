@@ -4,8 +4,9 @@ import Header from "./Header";
 
 const Layout = ({ children, page }) => {
   return (
-    <div>
+    <div className="notranslate">
       <Head>
+        <meta name="google" content="notranslate"></meta>
         <meta charSet="UTF-8" />
         <meta
           httpEquiv="Content-Security-Policy"
