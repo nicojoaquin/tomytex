@@ -1,7 +1,12 @@
 import Image from "next/image";
 import styles from "../styles/inicio.module.css";
 
-const Nosotros = ({ desc, imagen, cards: { card1, card2, card3 } }) => {
+const Nosotros = ({
+  desc,
+  atencion,
+  imagen,
+  cards: { card1, card2, card3 },
+}) => {
   return (
     <section className="mt-5 px-3">
       <div className="row mb-5">
@@ -27,7 +32,7 @@ const Nosotros = ({ desc, imagen, cards: { card1, card2, card3 } }) => {
             Atención al público
           </h2>
           <h3 className="mb-5 tex-center text-muted text-decoration-underline">
-            La venta mínima es de 1KG
+            {atencion}
           </h3>
           <iframe
             className={`mb-5 ${styles.iframe}`}

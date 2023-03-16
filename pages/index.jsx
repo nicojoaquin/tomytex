@@ -18,6 +18,7 @@ const Home = ({ textos }) => {
         <Nosotros
           imagen={textos.imagenNosotros}
           desc={textos.descripcion}
+          atencion={textos.atencion}
           cards={{
             card1: textos.card1,
             card2: textos.card2,
