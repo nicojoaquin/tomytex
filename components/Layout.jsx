@@ -2,7 +2,11 @@ import Head from "next/head";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Layout = ({ children, page }) => {
+const Layout = ({
+  children,
+  page,
+  description = "Especialista en telas deportivas y distribuidor de telas Modelo",
+}) => {
   return (
     <div className="notranslate">
       <Head>
@@ -16,11 +20,11 @@ const Layout = ({ children, page }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Página oficial de Tomytex - Especialista en telas deportivas y distribuidor de telas Modelo"
+          content={`Página oficial de Tomytex - ${description}`}
         />
         <meta
           name="keywords"
-          content="tela, telas, TELA, TELAS, MODELO, modelo, TEXTIL, textil, deportivo, DEPORTIVO, deportivas, DEPORTIVAS, SET, MODAL, POLAR, set, modal, polar, distribuidor, telas deportivas, TELAS DEPORTIVAS, tomytex, TOMYTEX, ONCE, once "
+          content="tomytex, TOMYTEX, tela, telas, TELA, TELAS, MODELO, modelo, TEXTIL, textil, deportivo, DEPORTIVO, deportivas, DEPORTIVAS, SET, MODAL, POLAR, set, modal, polar, distribuidor, telas deportivas, TELAS DEPORTIVAS, tomytex, TOMYTEX, ONCE, once "
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

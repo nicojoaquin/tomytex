@@ -10,7 +10,7 @@ const Colores = ({ colores }) => {
   const [query, setQuery] = useState("");
 
   return (
-    <Layout page={"Colores"}>
+    <Layout page={"Colores"} description="Nuestros colores">
       <main className="container">
         <div
           className={`d-flex flex-wrap align-items-center justify-content-start ${styles.tiendaContainer}`}

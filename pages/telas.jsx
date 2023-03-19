@@ -10,7 +10,7 @@ const Telas = ({ telas }) => {
   const [query, setQuery] = useState("");
 
   return (
-    <Layout page={"Telas"}>
+    <Layout page={"Telas"} description="Nuestras telas">
       <main className="container">
         <div
           className={`d-flex flex-wrap align-items-center justify-content-start ${styles.tiendaContainer}`}
