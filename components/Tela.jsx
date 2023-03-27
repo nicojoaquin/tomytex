@@ -12,6 +12,7 @@ const Tela = ({ _id: id, nombre, imagenes }) => {
           <div className={`p-5 ${styles.cardImg}`}>
             {imagenes.length > 0 ? (
               <Image
+                objectFit="cover"
                 priority
                 layout="responsive"
                 width={300}

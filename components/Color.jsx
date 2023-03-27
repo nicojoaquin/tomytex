@@ -9,6 +9,7 @@ const Color = ({ nombre, imagen }) => {
       <div className={`p-5 ${styles.cardImg}`}>
         {!!imagen ? (
           <Image
+            objectFit="cover"
             priority
             layout="responsive"
             width={300}

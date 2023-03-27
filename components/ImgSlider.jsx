@@ -10,6 +10,7 @@ const ImgSlider = ({ imagenes, nombre }) => {
     thumbnailHeight: "60px",
     thumbnailAlt: `Miniatura - ${nombre}`,
     originalAlt: `Presentación ${nombre}`,
+    originalClass: "object-fit-cover",
   }));
 
   return (
