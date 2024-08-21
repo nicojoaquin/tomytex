@@ -6,7 +6,24 @@ import desconocido from "../../public/img/desconocido.jpg";
 import styles from "../../styles/card.module.css";
 import RichText from "../../components/rich-text";
 
-const Producto = ({ tela }) => {
+const tela = {
+  _id: 1,
+  nombre: "Lanilla",
+  desc: "Tela de lanilla",
+  comp: "100% Poliester",
+  imagenes: [
+    {
+      public_id: 1,
+      url: "/img/desconocido.jpg",
+    },
+    {
+      public_id: 1,
+      url: "/img/desconocido.jpg",
+    },
+  ],
+};
+
+const Producto = () => {
   const { desc, imagenes, nombre, comp } = tela;
   return (
     <Layout page={nombre} description={nombre}>
@@ -48,26 +65,26 @@ const Producto = ({ tela }) => {
   );
 };
 
-export const getServerSideProps = async (context) => {
-  const { id } = context.params;
+// export const getServerSideProps = async (context) => {
+//   const { id } = context.params;
 
-  try {
-    const res = await fetch(`${process.env.API_URL}/api/tela/${id}`);
-    const { tela, ok } = await res.json();
+//   try {
+//     const res = await fetch(`${process.env.API_URL}/api/tela/${id}`);
+//     const { tela, ok } = await res.json();
 
-    if (!ok) throw new Error("Not found");
+//     if (!ok) throw new Error("Not found");
 
-    return {
-      props: { tela },
-    };
-  } catch (error) {
-    return {
-      props: {},
-      redirect: {
-        destination: "/404",
-      },
-    };
-  }
-};
+//     return {
+//       props: { tela },
+//     };
+//   } catch (error) {
+//     return {
+//       props: {},
+//       redirect: {
+//         destination: "/404",
+//       },
+//     };
+//   }
+// };
 
 export default Producto;

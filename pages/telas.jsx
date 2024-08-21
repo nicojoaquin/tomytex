@@ -5,7 +5,50 @@ import Listado from "../components/Listado";
 
 import styles from "../styles/tienda.module.css";
 
-const Telas = ({ telas }) => {
+const telas = [
+  {
+    _id: 1,
+    nombre: "Lanilla",
+    imagenes: [
+      {
+        public_id: 1,
+        url: "/img/desconocido.jpg",
+      },
+    ],
+  },
+  {
+    _id: 2,
+    nombre: "Set Deportivo",
+    imagenes: [
+      {
+        public_id: 1,
+        url: "/img/desconocido.jpg",
+      },
+    ],
+  },
+  {
+    _id: 3,
+    nombre: "Friza",
+    imagenes: [
+      {
+        public_id: 1,
+        url: "/img/desconocido.jpg",
+      },
+    ],
+  },
+  {
+    _id: 4,
+    nombre: "Jersey",
+    imagenes: [
+      {
+        public_id: 1,
+        url: "/img/desconocido.jpg",
+      },
+    ],
+  },
+];
+
+const Telas = () => {
   const [telasFiltradas, setTelasFiltradas] = useState([]);
   const [query, setQuery] = useState("");
 
@@ -32,24 +75,24 @@ const Telas = ({ telas }) => {
   );
 };
 
-export const getServerSideProps = async () => {
-  try {
-    const res = await fetch(`${process.env.API_URL}/api`);
-    const data = await res.json();
+// export const getServerSideProps = async () => {
+//   try {
+//     const res = await fetch(`${process.env.API_URL}/api`);
+//     const data = await res.json();
 
-    return {
-      props: {
-        telas: data?.telas,
-      },
-    };
-  } catch (err) {
-    return {
-      props: {},
-      redirect: {
-        destination: "/404",
-      },
-    };
-  }
-};
+//     return {
+//       props: {
+//         telas: data?.telas,
+//       },
+//     };
+//   } catch (err) {
+//     return {
+//       props: {},
+//       redirect: {
+//         destination: "/404",
+//       },
+//     };
+//   }
+// };
 
 export default Telas;

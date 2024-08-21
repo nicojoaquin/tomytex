@@ -5,7 +5,50 @@ import Listado from "../components/Listado";
 
 import styles from "../styles/tienda.module.css";
 
-const Colores = ({ colores }) => {
+const colores = [
+  {
+    _id: 1,
+    nombre: "Rojo",
+    imagenes: [
+      {
+        public_id: 1,
+        url: "/img/desconocido.jpg",
+      },
+    ],
+  },
+  {
+    _id: 2,
+    nombre: "Azul",
+    imagenes: [
+      {
+        public_id: 1,
+        url: "/img/desconocido.jpg",
+      },
+    ],
+  },
+  {
+    _id: 3,
+    nombre: "Verde",
+    imagenes: [
+      {
+        public_id: 1,
+        url: "/img/desconocido.jpg",
+      },
+    ],
+  },
+  {
+    _id: 4,
+    nombre: "Amarillo",
+    imagenes: [
+      {
+        public_id: 1,
+        url: "/img/desconocido.jpg",
+      },
+    ],
+  },
+];
+
+const Colores = () => {
   const [coloresFiltrados, setcoloresFiltrados] = useState([]);
   const [query, setQuery] = useState("");
 
@@ -37,24 +80,24 @@ const Colores = ({ colores }) => {
   );
 };
 
-export const getServerSideProps = async () => {
-  try {
-    const res = await fetch(`${process.env.API_URL}/colores`);
-    const data = await res.json();
+// export const getServerSideProps = async () => {
+//   try {
+//     const res = await fetch(`${process.env.API_URL}/colores`);
+//     const data = await res.json();
 
-    return {
-      props: {
-        colores: data?.colores,
-      },
-    };
-  } catch (err) {
-    return {
-      props: {},
-      redirect: {
-        destination: "/404",
-      },
-    };
-  }
-};
+//     return {
+//       props: {
+//         colores: data?.colores,
+//       },
+//     };
+//   } catch (err) {
+//     return {
+//       props: {},
+//       redirect: {
+//         destination: "/404",
+//       },
+//     };
+//   }
+// };
 
 export default Colores;
